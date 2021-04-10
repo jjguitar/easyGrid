@@ -40,6 +40,7 @@ body {
 
 nav {
   grid-area: navbar;
+  width: 224px;
   font-size: 1.4rem;
   background-color: red;
 }
@@ -59,18 +60,15 @@ header {
 
 main {
   position: relative;
-  
   grid-area: main;
   height: 100%;
-  /* overflow: hidden!important; */
+  padding-bottom: 20px;
   font-size: 1.4rem;
-  background-color: chartreuse;
-  /* scroll-behavior: smooth; */
   scroll-snap-align: center;
   overflow-y: scroll;
   overscroll-behavior-x: contain;
   scroll-snap-type: y proximity;
-  padding-bottom: 20px;
+  background-color: chartreuse;
 }
 
 main::-webkit-scrollbar {
@@ -86,10 +84,165 @@ main::-webkit-scrollbar-thumb {
   padding-top: 60px;
 }
 
+
+
+.container__greeting {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+  grid-template-rows: auto auto;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+}
+
+.container__greeting::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.container__greeting::-webkit-scrollbar-thumb {
+  background-color: aquamarine;
+}
+
+
+.container__greeting > div {
+  white-space: nowrap;
+}
+
+.card__item {
+  width: 244px;
+  height: 80px;
+  background-color: red;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.row__1, .row__2 {
+  display: flex;
+}
+
+.greetings {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.container__recently {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto;
+  grid-auto-flow: column;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.container__recently::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.container__recently::-webkit-scrollbar-thumb {
+  background-color: aqua;
+}
+
+.container__recently h1 {
+  margin: 20px 0 10px
+}
+
+.recently-played {
+  padding-left: 20px;
+  margin: 30px 0;
+}
+
+.card-img {
+  width: 100%;
+  height: 60%;
+  margin: 0 auto;
+  background-color: blue;
+
+}
+
+.card-recently {
+  width: 244px;
+  height: 322px;
+  background-color: red;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+
 footer {
   grid-area: player;
+  position: relative;
+  width: 100%;
   font-size: 1.4rem;
   background-color: coral;
   z-index: 4;
   height: 60px;
+}
+
+
+#install-app {
+  position: absolute;
+  top: -30px;
+  width: 224px;
+  height: 30px;
+  background-color: blueviolet;
+  display: flex;
+  align-items: center;
+  padding: 0 0 0 40px;
+}
+
+.logo {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.menu__items {
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.menu__items li {
+  padding: 10px 20px;
+}
+
+.menu__items li:first-child {
+  background-color: pink;
+  color: white;
+}
+
+li:hover {
+  color: white;
+}
+
+.created__list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.created__list li {
+  padding: 10px 20px;
+}
+
+.list__container {
+  height: calc(100vh - 395px);
+  overflow-y: scroll;
+}
+
+.list__container::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.list__container::-webkit-scrollbar-thumb {
+  background-color: pink;
+}
+
+.list__container ul {
+  padding: 0 0 0 20px;
+}
+
+.list__container ul li {
+  padding: 10px 0;
 }
